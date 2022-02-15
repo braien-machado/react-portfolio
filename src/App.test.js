@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { getByTestId, getByText, render, screen, within } from '@testing-library/react';
 import App from './App';
 
 describe('test header', () => {
@@ -29,9 +29,84 @@ describe('test header', () => {
 describe('test presentation', () => {
   it('renders the right content', () => {
     render(<App />);
-    const presentationElement = screen.getByText(/Olá/i);
+    const presentationText = screen.getByText(/Olá/i);
     const content = /Olá! Eu sou Braien Machado. Desenvolvedor Front-end/i;
-    expect(presentationElement).toBeInTheDocument();
-    expect(presentationElement).toHaveTextContent(content);
+    expect(presentationText).toBeInTheDocument();
+    expect(presentationText).toHaveTextContent(content);
   });
-})
+});
+
+describe('test skills and Curriculum vitæ', () => {
+  describe('hard skills are correct', () => {
+    it("has 'Hard Skills' title", () => {
+      render(<App />);
+      const hardSkillsTitle = screen.getByText('Hard Skills');
+      
+      expect(hardSkillsTitle).toBeInTheDocument();
+    });
+
+    it("has at least one hard skill", () => {
+      render(<App />);
+      const hardSkills = screen.queryAllByTestId('hard-skill');
+      
+      expect(hardSkills.length).toBeGreaterThanOrEqual(1);
+    });
+  });
+
+  describe('soft skills are correct', () => {
+    it("has 'Soft Skills' title", () => {
+      render(<App />);
+      const softSkillsTitle = screen.getByText(/Soft Skills/i);
+      
+      expect(softSkillsTitle).toBeInTheDocument();
+    });
+
+    it("has at least one soft skill", () => {
+      render(<App />);
+      const softSkills = screen.queryAllByTestId('soft-skill');
+      
+      expect(softSkills.length).toBeGreaterThanOrEqual(1);
+    });
+  })
+
+  it('has Curriculum vitæ link', () => {
+    render(<App />);
+    const cvLink = screen.getByText(/veja meu currículo/i);
+
+    expect(cvLink).toBeInTheDocument();
+  });
+});
+
+describe('test projects section', () => {
+  it('has a title', () => {
+    render(<App />);
+    const projectSectionTitle = screen.getByTestId('projects-title');
+
+    expect(projectSectionTitle).toBeInTheDocument();
+    expect(projectSectionTitle).toHaveTextContent('Projetos');
+  });
+});
+
+describe('test contact section', () => {
+  it('has a title', () => {
+    render(<App />);
+    const contactTitle = screen.getByTestId('contact-title');
+
+    expect(contactTitle).toBeInTheDocument();
+    expect(contactTitle).toHaveTextContent('Informações de Contato');
+  });
+});
+
+describe('test footer', () => {
+  it('is in the document', () => {
+    render(<App />);
+    const footer = screen.getByRole('contentinfo');
+    expect(footer).toBeInTheDocument();
+  });
+
+  it('has the correct text', () => {
+    render(<App />);
+    const footerText = screen.getByTestId('footer-text');
+    expect(footerText).toHaveTextContent('desenvolvido por Braien Machado.')
+  });
+});

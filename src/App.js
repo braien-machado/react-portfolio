@@ -13,7 +13,29 @@ function App() {
           </ul>
         </nav>
       </header>
-      <h1>Olá! Eu sou <span>Braien Machado.</span> <span>Desenvolvedor Front-end</span></h1>
+      <section id="presentation">
+        <h1>Olá! Eu sou <span>Braien Machado.</span> <span>Desenvolvedor Front-end</span></h1>
+      </section>
+      <section>
+        <ul>
+          <h2>Hard Skills</h2>
+          <li data-testid="hard-skill">React</li>
+        </ul>
+        <ul>
+          <h2>Soft Skills</h2>
+          <li data-testid="soft-skill">Colaboração</li>
+        </ul>
+        <a href='#'>Veja meu currículo</a>
+      </section>
+      <section>
+        <h2 data-testid="projects-title">Projetos</h2>
+      </section>
+      <section>
+        <h2 data-testid="contact-title">Informações de Contato</h2>
+      </section>
+      <footer role="contentinfo">
+        <span data-testid="footer-text">desenvolvido por Braien Machado.</span>
+      </footer>
     </div>
   );
 }
