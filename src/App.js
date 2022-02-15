@@ -13,7 +13,14 @@ function App() {
           </ul>
         </nav>
       </header>
-      <h1>Olá! Eu sou <span>Braien Machado.</span> <span>Desenvolvedor Front-end</span></h1>
+      <section id="presentation">
+        <h1>Olá! Eu sou <span>Braien Machado.</span> <span>Desenvolvedor Front-end</span></h1>
+      </section>
+      <section>
+        <h2>Hard Skills</h2>
+        <h2>Soft Skills</h2>
+        <a href='#'>Veja meu currículo</a>
+      </section>
     </div>
   );
 }

@@ -29,9 +29,32 @@ describe('test header', () => {
 describe('test presentation', () => {
   it('renders the right content', () => {
     render(<App />);
-    const presentationElement = screen.getByText(/Olá/i);
+    const presentationText = screen.getByText(/Olá/i);
     const content = /Olá! Eu sou Braien Machado. Desenvolvedor Front-end/i;
-    expect(presentationElement).toBeInTheDocument();
-    expect(presentationElement).toHaveTextContent(content);
+    expect(presentationText).toBeInTheDocument();
+    expect(presentationText).toHaveTextContent(content);
   });
-})
+});
+
+describe('test skills and Curriculum vitæ', () => {
+  it("has 'Hard Skills' title", () => {
+    render(<App />);
+    const hardSkills = screen.getByText('Hard Skills');
+
+    expect(hardSkills).toBeInTheDocument();
+  });
+
+  it("has 'Soft Skills' title", () => {
+    render(<App />);
+    const softSkills = screen.getByText(/Soft Skills/i);
+
+    expect(softSkills).toBeInTheDocument();
+  });
+
+  it('has Curriculum vitæ link', () => {
+    render(<App />);
+    const cvLink = screen.getByText(/veja meu currículo/i);
+
+    expect(cvLink).toBeInTheDocument();
+  });
+});
