@@ -37,19 +37,37 @@ describe('test presentation', () => {
 });
 
 describe('test skills and Curriculum vitæ', () => {
-  it("has 'Hard Skills' title", () => {
-    render(<App />);
-    const hardSkills = screen.getByText('Hard Skills');
+  describe('hard skills are correct', () => {
+    it("has 'Hard Skills' title", () => {
+      render(<App />);
+      const hardSkillsTitle = screen.getByText('Hard Skills');
+      
+      expect(hardSkillsTitle).toBeInTheDocument();
+    });
 
-    expect(hardSkills).toBeInTheDocument();
+    it("has at least one hard skill", () => {
+      render(<App />);
+      const hardSkills = screen.queryAllByTestId('hard-skill');
+      
+      expect(hardSkills.length).toBeGreaterThanOrEqual(1);
+    });
   });
 
-  it("has 'Soft Skills' title", () => {
-    render(<App />);
-    const softSkills = screen.getByText(/Soft Skills/i);
+  describe('soft skills are correct', () => {
+    it("has 'Soft Skills' title", () => {
+      render(<App />);
+      const softSkillsTitle = screen.getByText(/Soft Skills/i);
+      
+      expect(softSkillsTitle).toBeInTheDocument();
+    });
 
-    expect(softSkills).toBeInTheDocument();
-  });
+    it("has at least one soft skill", () => {
+      render(<App />);
+      const softSkills = screen.queryAllByTestId('soft-skill');
+      
+      expect(softSkills.length).toBeGreaterThanOrEqual(1);
+    });
+  })
 
   it('has Curriculum vitæ link', () => {
     render(<App />);
