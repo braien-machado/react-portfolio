@@ -27,6 +27,12 @@ function App() {
         </ul>
         <a href='#'>Veja meu currículo</a>
       </section>
+      <section>
+        <h2 data-testid="projects-title">Projetos</h2>
+      </section>
+      <section>
+        <h2 data-testid="contact-title">Informações de Contato</h2>
+      </section>
     </div>
   );
 }

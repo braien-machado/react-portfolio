@@ -76,3 +76,23 @@ describe('test skills and Curriculum vitæ', () => {
     expect(cvLink).toBeInTheDocument();
   });
 });
+
+describe('test projects section', () => {
+  it('has a title', () => {
+    render(<App />);
+    const projectSectionTitle = screen.getByTestId('projects-title');
+
+    expect(projectSectionTitle).toBeInTheDocument();
+    expect(projectSectionTitle).toHaveTextContent('Projetos');
+  });
+});
+
+describe('test contact section', () => {
+  it('has a title', () => {
+    render(<App />);
+    const contactTitle = screen.getByTestId('contact-title');
+
+    expect(contactTitle).toBeInTheDocument();
+    expect(contactTitle).toHaveTextContent('Informações de Contato');
+  });
+});
