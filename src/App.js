@@ -33,6 +33,9 @@ function App() {
       <section>
         <h2 data-testid="contact-title">Informações de Contato</h2>
       </section>
+      <footer role="contentinfo">
+        <span data-testid="footer-text">desenvolvido por Braien Machado.</span>
+      </footer>
     </div>
   );
 }

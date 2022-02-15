@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { getByTestId, getByText, render, screen, within } from '@testing-library/react';
 import App from './App';
 
 describe('test header', () => {
@@ -94,5 +94,19 @@ describe('test contact section', () => {
 
     expect(contactTitle).toBeInTheDocument();
     expect(contactTitle).toHaveTextContent('Informações de Contato');
+  });
+});
+
+describe('test footer', () => {
+  it('is in the document', () => {
+    render(<App />);
+    const footer = screen.getByRole('contentinfo');
+    expect(footer).toBeInTheDocument();
+  });
+
+  it('has the correct text', () => {
+    render(<App />);
+    const footerText = screen.getByTestId('footer-text');
+    expect(footerText).toHaveTextContent('desenvolvido por Braien Machado.')
   });
 });
