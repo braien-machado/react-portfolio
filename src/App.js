@@ -25,7 +25,7 @@ function App() {
           <h2>Soft Skills</h2>
           <li data-testid="soft-skill">Colaboração</li>
         </ul>
-        <a href='#'>Veja meu currículo</a>
+        <a href='#cv' id="cv">Veja meu currículo</a>
       </section>
       <section>
         <h2 data-testid="projects-title">Projetos</h2>
