@@ -1,13 +1,19 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import About from './pages/About';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<About />} />
+      </Routes>
+
+      {/* <div className="App">
         <section id="presentation">
           <h1>Olá! Eu sou <span>Braien Machado.</span> <span>Desenvolvedor Front-end</span></h1>
         </section>
@@ -28,8 +34,9 @@ function App() {
         <section>
           <h2 data-testid="contact-title">Informações de Contato</h2>
         </section>
-        <Footer />
-      </div>
+      </div> */}
+
+      <Footer />
     </BrowserRouter>
   );
 }
