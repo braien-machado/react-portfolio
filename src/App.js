@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,9 +28,7 @@ function App() {
         <section>
           <h2 data-testid="contact-title">Informações de Contato</h2>
         </section>
-        <footer role="contentinfo">
-          <span data-testid="footer-text">desenvolvido por Braien Machado.</span>
-        </footer>
+        <Footer />
       </div>
     </BrowserRouter>
   );
