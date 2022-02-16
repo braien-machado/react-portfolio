@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function About() {
   return (
-    <main>
-      <h1>Olá! Eu sou
+    <main className='h-screen py-12 bg-black text-white'>
+      <h1 className='flex flex-col text-center'>Olá! Eu sou
         <span>Braien Machado.</span>
         <span>Desenvolvedor Front-end</span></h1>
     </main>
