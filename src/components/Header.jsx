@@ -15,7 +15,7 @@ export default function Header () {
     return (
       <li className='mt-4 hover:underline hover:font-medium hover:cursor-pointer text-white'>{ link }</li>
     );
-  }
+  };
 
   return (
     <header className='flex justify-between p-2 relative bg-gray-900'>
@@ -35,5 +35,5 @@ export default function Header () {
         }
       </button>
     </header>
-  )
+  );
 }
