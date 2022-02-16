@@ -21,7 +21,13 @@ export default function Header () {
         </ul>
       </nav>
       <button className='w-fit'>
-        <GiHamburgerMenu size={30} onClick={ toggleMenu }/>
+        {
+          isHidden ? (
+            <GiHamburgerMenu size={30} onClick={ toggleMenu }/>
+          ) : (
+            <GrClose size={30} onClick={ toggleMenu }/>
+          )
+        }
       </button>
     </header>
   )
