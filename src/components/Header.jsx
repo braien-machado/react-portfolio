@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { GiBattleAxe, GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 
 export default function Header () {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
+  const { pathname } = useLocation();
 
   const toggleMenu = () => {
     setIsMenuHidden(isMenuHidden ? false : true);
@@ -18,12 +19,19 @@ export default function Header () {
   ];
 
   const generateMenuLink = ({ link, path }, index) => {
-    return (
-      <li key={ link } className='mt-4 hover:underline hover:font-medium hover:cursor-pointer text-white'>
-        <Link to={ path }>
-          { link }
-        </Link>
+    if (pathname === path) {
+      return (
+        <li key={ link } className='py-4 w-60 text-center font-medium text-black bg-white'>
+        { link }
       </li>
+      )
+    }
+    return (
+      <Link key={ link } to={ path }>
+        <li className='py-4 w-60 text-center hover:font-medium hover:bg-gray-700 hover:cursor-pointer text-white'>
+          { link }
+        </li>
+      </Link>
     );
   };
 
