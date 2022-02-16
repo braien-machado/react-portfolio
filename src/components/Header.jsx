@@ -18,7 +18,7 @@ export default function Header () {
   };
 
   return (
-    <header className='flex justify-between p-2 absolute w-full bg-gray-900'>
+    <header className='flex justify-between p-2 absolute w-full bg-gray-900 shadow-slate-700 shadow-sm'>
       <GiBattleAxe className='text-white' size={30} />
       <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} flex flex-col justify-between items-center absolute top-0 w-60 bg-gray-800 h-screen duration-300 z-10`}>
         <ul className='flex flex-col items-center text-lg w-fit'>
