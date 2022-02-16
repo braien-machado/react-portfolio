@@ -7,7 +7,6 @@ export default function About() {
         <span className='text-5xl border-b-2 w-fit'>Braien Machado.</span>
         <span className='pt-2'>Desenvolvedor Front-end</span>
       </h1>
-
     </main>
   )
 }
