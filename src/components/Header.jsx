@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { GiBattleAxe, GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 
@@ -9,11 +10,20 @@ export default function Header () {
     setIsMenuHidden(isMenuHidden ? false : true);
   };
 
-  const menuLinks = ['Sobre mim', 'Habilidades', 'Projetos', 'Contato'];
+  const menuLinks = [
+    { link: 'Sobre mim', path: '/'},
+    { link: 'Habilidades', path: '/skills'},
+    { link: 'Projetos', path: '/projects'},
+    { link: 'Contato', path: '/contactme'},
+  ];
 
-  const generateMenuLink = (link) => {
+  const generateMenuLink = ({ link, path }, index) => {
     return (
-      <li className='mt-4 hover:underline hover:font-medium hover:cursor-pointer text-white'>{ link }</li>
+      <li key={ link } className='mt-4 hover:underline hover:font-medium hover:cursor-pointer text-white'>
+        <Link to={ path }>
+          { link }
+        </Link>
+      </li>
     );
   };
 
