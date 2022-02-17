@@ -1,14 +1,24 @@
 import React from 'react'
-import { FaReact } from 'react-icons/fa';
+import { FaReact, FaDocker, FaNodeJs } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillHtml5, AiOutlineGithub } from 'react-icons/ai';
+import { DiCss3 } from 'react-icons/di';
+import { SiJest, SiRedux } from 'react-icons/si';
+import { GrMysql } from 'react-icons/gr';
 
 export default function HardSkills() {
   return (
     <div>
       <AiFillHtml5 />
+      <DiCss3 />
       <IoLogoJavascript />
+      <AiOutlineGithub />
+      <SiJest />
       <FaReact />
+      <SiRedux />
+      <FaDocker />
+      <GrMysql />
+      <FaNodeJs />
     </div>
   )
 }
