@@ -3,7 +3,7 @@ import { FaReact, FaDocker, FaNodeJs } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { AiFillHtml5, AiOutlineGithub } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiJest, SiRedux } from 'react-icons/si';
+import { SiJest, SiRedux, SiTestinglibrary } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 
 export default function HardSkills() {
@@ -16,6 +16,7 @@ export default function HardSkills() {
       <SiJest />
       <FaReact />
       <SiRedux />
+      <SiTestinglibrary />
       <FaDocker />
       <GrMysql />
       <FaNodeJs />
