@@ -1,12 +1,11 @@
 import React from 'react';
-import HardSkillsCards from '../components/HardSkillsCards';
+import HardSkillsLibrary from '../components/HardSkillsLibrary';
 
 
 export default function Skills() {
   return (
     <main className='min-h-screen py-12  bg-gray-900 text-white'>
-      <h1>Hard Skills</h1>
-      <HardSkillsCards />
+      <HardSkillsLibrary />
       {/* <ul>
         <h2>Hard Skills</h2>
         <li data-testid="hard-skill">React</li>
