@@ -22,7 +22,7 @@ const skills = [
 
 const generateSkill = ([Icon, name]) => {
   return (
-    <div key={name} className='m-2 shadow-md shadow-black bg-white rounded-full flex flex-col justify-center items-center w-52 h-52'>
+    <div key={name} className='m-2 flex flex-col justify-center items-center w-40 h-40'>
       <Icon size={100}/>
       <h2 className='text-2xl'>{ name }</h2>
     </div>
@@ -33,7 +33,7 @@ export default function HardSkills() {
   return (
     <div className=''>
       <h1 className='text-center text-4xl my-4'>Ferramentas e Linguagens</h1>
-      <div className='flex flex-wrap justify-center text-gray-900'>
+      <div className='flex flex-wrap justify-center'>
         { skills.map(generateSkill) }
       </div>
     </div>
