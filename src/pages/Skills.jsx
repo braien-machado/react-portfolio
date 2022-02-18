@@ -1,11 +1,14 @@
 import React from 'react';
 import SkillsLibrary from '../components/SkillsLibrary';
-import { FaReact, FaDocker, FaNodeJs } from 'react-icons/fa';
+import { FaReact, FaDocker, FaNodeJs, FaHandHoldingHeart } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { AiFillHtml5, AiOutlineGithub } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { SiJest, SiRedux, SiTestinglibrary } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
+import { BiConversation } from 'react-icons/bi';
+import { RiTeamFill } from 'react-icons/ri'
+import { GiBrain } from 'react-icons/gi';
 
 const hardSkills = [
   [AiOutlineGithub, 'GitHub'],
@@ -22,7 +25,10 @@ const hardSkills = [
 ];
 
 const softSkills = [
-
+  [BiConversation, 'Comunicação'],
+  [RiTeamFill, 'Colaboração'],
+  [FaHandHoldingHeart, 'Empatia'],
+  [GiBrain, 'Inteligência Emocional'],
 ];
 
 
