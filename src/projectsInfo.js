@@ -3,7 +3,7 @@ const projectsInfo = [
   {
     name: 'React Portfolio',
     description: 'Portfolio feito em React',
-    image: '',
+    image: 'portfolio-react.png',
     demo: 'https://braien-machado.vercel.app/',
     repository: 'https://github.com/braien-machado/react-portfolio',
     stacks: [

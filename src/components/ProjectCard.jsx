@@ -15,7 +15,7 @@ export default function ProjectCard(props) {
 
   return (
     <div key={index} className='border-gray-800 border-2 hover:border-gray-300 duration-300 shadow-md rounded-md w-4/5 p-2 mb-4'>
-      <img src={image} alt={`${name} cover`} />
+      <img src={require(`../images/${image}`)} alt={`${name} cover`} />
       <h1>{name}</h1>
       <p>{description}</p>
       <ul>
