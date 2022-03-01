@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillsLibrary from '../components/SkillsLibrary';
-import { softSkills, hardSkills } from '../skills';
+import { softSkills, hardSkills } from '../skillsInfo';
 
 
 export default function Skills() {
