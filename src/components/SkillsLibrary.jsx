@@ -1,7 +1,7 @@
 import React from 'react';
 
 const handleWords = (string) => {
-  const arrayString = string.split(' ');
+  const arrayString = string.split('/');
   if (arrayString.length > 1) {
     return arrayString.map((word, index) => (
       <h2 key={`${index}-${word}`} className='text-2xl'>{word}</h2>
