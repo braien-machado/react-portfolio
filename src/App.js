@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
-import ContactMe from './pages/ContactMe';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path="/" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contactme" element={<ContactMe />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
