@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GiBattleAxe, GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
-import { GrClose } from 'react-icons/gr';
 
 export default function Header () {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
@@ -54,14 +53,11 @@ export default function Header () {
           <GiBattleAxe className='text-white' size={100} />
         </div>
       </nav>
+      { isMenuHidden ? null : (
+        <button className={`fixed bg-black opacity-80 w-screen h-screen top-0 left-0`} onClick={toggleMenu}></button>
+      )}
       <button className='w-fit'>
-        {
-          isMenuHidden ? (
-            <GiHamburgerMenu className='text-white' size={30} onClick={ toggleMenu }/>
-          ) : (
-            <GrClose className='bg-white' size={30} onClick={ toggleMenu }/>
-          )
-        }
+        <GiHamburgerMenu className='text-white' size={30} onClick={ toggleMenu }/>
       </button>
     </header>
   );
