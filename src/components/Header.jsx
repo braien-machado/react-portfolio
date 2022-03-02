@@ -36,7 +36,7 @@ export default function Header () {
   };
 
   return (
-    <header className='flex justify-between p-2 absolute w-full bg-gray-900 shadow-slate-700 shadow-sm'>
+    <header className='flex justify-between p-2 fixed w-full bg-gray-900 shadow-slate-700 shadow-sm z-10'>
       <GiBattleAxe className='text-white' size={30} />
       <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} flex flex-col justify-between items-center absolute top-0 w-60 bg-gray-800 h-screen duration-300 z-10`}>
         <ul className='flex flex-col items-center text-lg w-fit'>
@@ -54,7 +54,7 @@ export default function Header () {
           <GiBattleAxe className='text-white' size={100} />
         </div>
       </nav>
-      <button className='w-fit absolute z-10 right-2'>
+      <button className='w-fit'>
         {
           isMenuHidden ? (
             <GiHamburgerMenu className='text-white' size={30} onClick={ toggleMenu }/>
