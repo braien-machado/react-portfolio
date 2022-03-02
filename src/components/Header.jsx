@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GiBattleAxe, GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { GrClose } from 'react-icons/gr';
 
 export default function Header () {
@@ -15,7 +16,6 @@ export default function Header () {
     { link: 'Sobre mim', path: '/'},
     { link: 'Habilidades', path: '/skills'},
     { link: 'Projetos', path: '/projects'},
-    { link: 'Contato', path: '/contactme'},
   ];
 
   const generateMenuLink = ({ link, path }, index) => {
@@ -27,8 +27,8 @@ export default function Header () {
       )
     }
     return (
-      <Link key={ link } to={ path }>
-        <li className='py-4 w-60 text-center hover:font-medium hover:bg-gray-700 hover:cursor-pointer text-white'>
+      <Link key={ link } to={ path } onClick={ toggleMenu } >
+        <li className='py-4 w-60 text-center hover:font-medium hover:bg-gray-700 hover:cursor-pointer text-white duration-200'>
           { link }
         </li>
       </Link>
@@ -42,6 +42,14 @@ export default function Header () {
         <ul className='flex flex-col items-center text-lg w-fit'>
           { menuLinks.map((link) => generateMenuLink(link)) }
         </ul>
+        <div className='flex w-full text-white justify-evenly'>
+          <a className='hover:text-gray-500 duration-200' href='https://github.com/braien-machado' target='_blank' rel='noreferrer'>
+              <AiOutlineGithub size={50} />
+          </a>
+          <a className='hover:text-gray-500 duration-200' href='https://linkedin.com/in/braien-machado' target='_blank' rel='noreferrer'>
+            <AiFillLinkedin size={50} />
+          </a>
+        </div>
         <div className='pb-14'>
           <GiBattleAxe className='text-white' size={100} />
         </div>
