@@ -37,7 +37,6 @@ export default function Header () {
   return (
     <header className='flex justify-between p-2 fixed w-full bg-gray-900 shadow-slate-700 shadow-sm z-10'>
       <GiBattleAxe className='text-white' size={30} />
-      <div className={`${isMenuHidden ? 'hidden' : ''} fixed bg-black opacity-80 w-screen h-screen top-0 left-0`} onClick={toggleMenu}></div>
       <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} flex flex-col justify-between items-center absolute top-0 w-60 bg-gray-800 h-screen duration-300 z-10`}>
         <ul className='flex flex-col items-center text-lg w-fit'>
           { menuLinks.map((link) => generateMenuLink(link)) }
@@ -54,6 +53,9 @@ export default function Header () {
           <GiBattleAxe className='text-white' size={100} />
         </div>
       </nav>
+      { isMenuHidden ? null : (
+        <button className={`fixed bg-black opacity-80 w-screen h-screen top-0 left-0`} onClick={toggleMenu}></button>
+      )}
       <button className='w-fit'>
         <GiHamburgerMenu className='text-white' size={30} onClick={ toggleMenu }/>
       </button>
