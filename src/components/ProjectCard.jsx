@@ -6,7 +6,7 @@ export default function ProjectCard(props) {
 
   if (!name) {
     return (
-      <div key={index} className='border-gray-800 border-2 hover:border-gray-300 shadow-md duration-300 rounded-md w-4/5 p-2 mb-4'>
+      <div key={index} className='border-gray-800 border-2 hover:border-gray-300 shadow-lg duration-300 rounded-lg w-4/5 p-2 mb-4'>
         <h1 className='text-2xl font-medium'>Em breve</h1>
         <p className='italic text-gray-500'>Projeto em desenvolvimento...</p>
       </div>
@@ -14,14 +14,14 @@ export default function ProjectCard(props) {
   }
 
   return (
-    <div key={index} className='border-gray-800 border-2 hover:border-gray-300 duration-300 shadow-md rounded-md w-4/5 p-2 mb-4 md:flex md:flex-row-reverse md:justify-end md:items-center'>
-      <img  className='object-cover w-full md:w-1/2 md:object-contain rounded-t-md border-b-2 md:border-0 border-gray-800' src={require(`../images/${image}`)} alt={`${name} cover`} />
-      <div className='md:w-1/2 md:text-center md:flex md:h-full md:flex-col md:justify-around'>
+    <div key={index} className='border-gray-800 border-2 hover:border-gray-300 duration-300 shadow-lg rounded-lg w-4/5 p-2 mb-4 lg:flex lg:flex-row-reverse lg:justify-end lg:items-center'>
+      <img  className='object-cover w-full lg:w-1/2 lg:object-contain rounded-t-lg lg:rounded-none' src={require(`../images/${image}`)} alt={`${name} cover`} />
+      <div className='lg:w-1/2 mt-2 lg:mt-0 lg:mr-2 lg:text-center lg:flex lg:h-full lg:flex-col lg:justify-around'>
         <h1 className='text-2xl font-medium'>{name}</h1>
         <p className='italic text-gray-500'>{description}</p>
         <ul className='list-inside list-square'>
           <h2 className='text-lg font-medium'>Ferramentas</h2>
-          <div className='flex md:justify-evenly md:flex-wrap'>
+          <div className='flex lg:justify-evenly lg:flex-wrap'>
             {
               stacks.map((stack, i) => (
                 <div key={`${stack}-${i}`} className='mx-1'>
@@ -33,10 +33,10 @@ export default function ProjectCard(props) {
         </ul>
         <div className='mt-2 flex justify-evenly flex-wrap'>
           <a  href={demo} target='_blank' rel='noreferrer'>
-            <button className='p-2 w-40 border-2 border-gray-800 hover:bg-gray-800 text-gray-500 hover:text-white hover:underline rounded-md duration-300 mb-2'>Demonstração</button>
+            <button className='p-2 w-40 border-2 border-gray-800 hover:bg-gray-800 text-gray-500 hover:text-white hover:underline rounded-lg duration-300 mb-2'>Demonstração</button>
           </a>
           <a href={repository} target='_blank' rel='noreferrer'>
-            <button className='p-2 w-40 border-2 border-gray-800 hover:bg-gray-800 text-gray-500 hover:text-white hover:underline rounded-md duration-300'>Repositório</button>
+            <button className='p-2 w-40 border-2 border-gray-800 hover:bg-gray-800 text-gray-500 hover:text-white hover:underline rounded-lg duration-300'>Repositório</button>
           </a>
         </div>
       </div>
