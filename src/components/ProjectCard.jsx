@@ -21,12 +21,10 @@ export default function ProjectCard(props) {
         <p className='italic text-gray-500'>{description}</p>
         <ul className='list-inside list-square'>
           <h2 className='text-md font-medium'>Ferramentas</h2>
-          <div className='flex lg:justify-evenly lg:flex-wrap'>
+          <div className='flex lg:justify-evenly flex-wrap'>
             {
               stacks.map((stack, i) => (
-                <div key={`${stack}-${i}`} className='mx-1'>
-                  <li className='italic text-gray-500'>{stack}</li>
-                </div>
+                <li key={`${stack}-${i}`} className='italic mx-2 text-gray-500'>{stack}</li>
               ))
             }
           </div>
