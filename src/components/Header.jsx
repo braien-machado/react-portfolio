@@ -20,14 +20,14 @@ export default function Header () {
   const generateMenuLink = ({ link, path }, index) => {
     if (pathname === path) {
       return (
-        <li key={ link } className='py-4 w-60 text-center font-medium text-black bg-white'>
+        <li key={ link } className='py-4 w-60 text-center text-white bg-zinc-900'>
         { link }
       </li>
       )
     }
     return (
       <Link key={ link } to={ path } onClick={ toggleMenu } >
-        <li className='py-4 w-60 text-center hover:font-medium hover:bg-gray-700 hover:cursor-pointer text-white duration-200'>
+        <li className='py-4 w-60 text-center hover:bg-zinc-500 hover:cursor-pointer text-white duration-200'>
           { link }
         </li>
       </Link>
@@ -35,17 +35,17 @@ export default function Header () {
   };
 
   return (
-    <header className='flex justify-between p-2 fixed w-full bg-gray-900 shadow-slate-700 shadow-sm z-10'>
+    <header className='flex justify-between p-2 fixed w-full bg-zinc-800 shadow-zinc-700 shadow-sm z-10'>
       <GiBattleAxe className='text-white' size={30} />
-      <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} flex flex-col justify-between items-center absolute top-0 w-60 bg-gray-800 h-screen duration-300 z-10`}>
+      <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} flex flex-col justify-between items-center absolute top-0 w-60 bg-zinc-800 h-screen duration-300 z-10`}>
         <ul className='flex flex-col items-center text-lg w-fit'>
           { menuLinks.map((link) => generateMenuLink(link)) }
         </ul>
         <div className='flex w-full text-white justify-evenly'>
-          <a className='hover:text-gray-500 duration-200' href='https://github.com/braien-machado' target='_blank' rel='noreferrer'>
+          <a className='hover:text-zinc-500 duration-200' href='https://github.com/braien-machado' target='_blank' rel='noreferrer'>
               <AiOutlineGithub size={50} />
           </a>
-          <a className='hover:text-gray-500 duration-200' href='https://linkedin.com/in/braien-machado' target='_blank' rel='noreferrer'>
+          <a className='hover:text-zinc-500 duration-200' href='https://linkedin.com/in/braien-machado' target='_blank' rel='noreferrer'>
             <AiFillLinkedin size={50} />
           </a>
         </div>
