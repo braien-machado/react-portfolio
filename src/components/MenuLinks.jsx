@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function MenuLinks({ toggleMenu }) {
-  const [section, setSection] = useState('#about');
 
   const menuLinks = [
     { link: 'Início', id: '#home'},
@@ -11,19 +10,11 @@ export default function MenuLinks({ toggleMenu }) {
   ];
 
   const generateMenuLink = ({ link, id }) => {
-    if (section === id) {
-      return (
-        <li key={ link } className='py-4 w-60 text-center text-white bg-zinc-900'>
-        { link }
-      </li>
-      )
-    }
     return (
-      <a href={id} key={ link } to={ id } onClick={ () => {
-        setSection(id);
+      <a className="sm:mx-4" href={id} key={ link } to={ id } onClick={ () => {
         toggleMenu()
       }}>
-        <li className='py-4 w-60 text-center hover:bg-zinc-500 hover:cursor-pointer text-white duration-200'>
+        <li className='py-4 sm:py-0 w-60 sm:w-fit text-center hover:text-blue-400 hover:cursor-pointer text-white duration-200'>
           { link }
         </li>
       </a>
@@ -31,7 +22,7 @@ export default function MenuLinks({ toggleMenu }) {
   };
 
   return (
-    <ul className='flex flex-col items-center text-lg w-fit'>
+    <ul className='flex flex-col sm:flex-row items-center text-lg w-fit'>
       {menuLinks.map((link) => generateMenuLink(link))}
     </ul>
   )
