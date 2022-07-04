@@ -11,7 +11,7 @@ export default function MobileNavMenu() {
 
   return (
     <div className="sm:hidden h-7">
-      <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} flex flex-col justify-between items-center absolute top-0 w-60 bg-zinc-800 h-screen duration-300 z-10`}>
+      <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} absolute top-0 w-60 bg-zinc-800 h-screen duration-300 z-10`}>
         <MenuLinks toggleMenu={toggleMenu}/>
       </nav>
       { isMenuHidden ? null : (
