@@ -1,5 +1,20 @@
 const projectsInfo = [
   {
+    name: 'Event Platform',
+    description: 'Plataforma de eventos na qual o usuário se cadastra na página inicial e tem acesso a todo o conteúdo disponível.',
+    image: 'event-platform.png',
+    demo: 'https://meetmyplaylist.vercel.app/',
+    repository: 'https://github.com/braien-machado/event-platform',
+    stacks: [
+      'Vite',
+      'React',
+      'Tailwind Css',
+      'Html',
+      'GraphQL',
+      'GraphCMS',
+    ],
+  },
+  {
     name: 'Where in the world?',
     description: 'A aplicação disponibiliza cards com informações básicas de diversos países, com opções de filtragem por nome e/ou região. Além disso, há a possibilidade de alterar entre modo escuro e claro. O usuário pode clicar em um card para ser redirecionado para uma tela com mais informações, como a moeda local. Da página de detalhes, também é possível acessar mais detalhes de qualquer país que faz fronteira com o selecionado, além de poder voltar à página inicial.',
     image: 'desktop-filter-dark.png',
@@ -9,7 +24,7 @@ const projectsInfo = [
       'React',
       'Sass',
       'Airbnb style',
-      'Rest API consumption'
+      'Rest API consumption',
     ],
   },
   {
