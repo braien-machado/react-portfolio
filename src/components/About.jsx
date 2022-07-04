@@ -13,9 +13,9 @@ export default function About() {
   }
 
   return (
-    <main id="about" className='min-h-screen py-12 bg-white text-zinc-800 flex flex-col items-center'>
-      <h1 className='flex flex-col text-center items-center text-4xl my-4'>Sobre mim</h1>
-      <div className='px-4 text-justify max-w-screen-sm mt-4 flex flex-col gap-4'>
+    <main id="about" className='min-h-screen py-16 bg-white text-zinc-800 flex flex-col items-center gap-8'>
+      <h1 className='flex flex-col text-center items-center text-4xl'>Sobre mim</h1>
+      <div className='px-4 text-justify max-w-screen-sm flex flex-col gap-4'>
         <p>
           Brasileiro, natural de Nova Friburgo, cidade da região serrana do estado do Rio de Janeiro. Sou casado e tenho
           <span>
