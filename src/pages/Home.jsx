@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
-const profilePic = require('../images/profile-pic.jpeg');
+const profilePic = require('../assets/profile-pic.jpeg');
 
 // add typing animation do "Desenvolvedor Front-end"
 export default function Home() {
