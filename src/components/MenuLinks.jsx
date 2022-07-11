@@ -14,7 +14,7 @@ export default function MenuLinks({ toggleMenu }) {
       <a className="sm:mx-4" href={id} key={ link } to={ id } onClick={ () => {
         toggleMenu()
       }}>
-        <li className='py-4 sm:py-0 w-60 sm:w-fit text-center hover:text-blue-400 hover:cursor-pointer text-white duration-200'>
+        <li className='w-fit text-center hover:text-green-300 hover:cursor-pointer text-white transition-colors'>
           { link }
         </li>
       </a>
@@ -22,7 +22,7 @@ export default function MenuLinks({ toggleMenu }) {
   };
 
   return (
-    <ul className='flex flex-col sm:flex-row items-center text-lg w-fit'>
+    <ul className='flex flex-col w-full sm:flex-row items-center text-lg mt-4 sm:mt-0 gap-4 sm:gap-0'>
       {menuLinks.map((link) => generateMenuLink(link))}
     </ul>
   )
