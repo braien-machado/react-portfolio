@@ -18,7 +18,7 @@ export default function MobileNavMenu() {
         <button className={`fixed cursor-default bg-black opacity-80 w-screen h-screen top-0 left-0`} onClick={toggleMenu}></button>
       )}
       <button className='w-fit'>
-        <GiHamburgerMenu className='text-white' size={30} onClick={ toggleMenu }/>
+        <GiHamburgerMenu className='text-white hover:text-green-300 transition-colors' size={30} onClick={ toggleMenu }/>
       </button>
     </div>
   )
