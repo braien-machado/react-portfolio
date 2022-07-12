@@ -3,7 +3,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        green: {
+          300: '#00B37E',
+        },
+      },
+    },
     listStyleType: {
       none: 'none',
       disc: 'disc',

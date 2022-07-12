@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillsLibrary from '../components/SkillsLibrary';
+import SkillsLibrary from './SkillsLibrary';
 import { softSkills, hardSkills } from '../skillsInfo';
 
 
