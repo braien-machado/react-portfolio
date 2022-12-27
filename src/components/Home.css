@@ -1,0 +1,7 @@
+#home {
+  @apply relative min-h-screen py-12 bg-zinc-800 text-white flex flex-col md:flex-row items-center justify-evenly;
+}
+
+.home-heading {
+  @apply flex flex-col text-center md:items-start items-center m-4 text-3xl md:text-4xl;
+}

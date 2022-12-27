@@ -2,15 +2,11 @@ import {
   FaReact,
   FaDocker,
   FaNodeJs,
-  FaHandHoldingHeart
+  FaHandHoldingHeart,
 } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { AiFillHtml5, AiOutlineGithub } from 'react-icons/ai';
-import {
-  DiCss3,
-  DiSass,
-  DiMongodb
-} from 'react-icons/di';
+import { DiCss3, DiSass, DiMongodb } from 'react-icons/di';
 import {
   SiJest,
   SiRedux,
@@ -19,11 +15,11 @@ import {
   SiPython,
   SiTailwindcss,
   SiGraphql,
-  SiStyledcomponents
+  SiStyledcomponents,
 } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { BiConversation } from 'react-icons/bi';
-import { RiTeamFill } from 'react-icons/ri'
+import { RiTeamFill } from 'react-icons/ri';
 import { GiBrain } from 'react-icons/gi';
 
 const hardSkills = [
