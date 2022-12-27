@@ -15,7 +15,7 @@ export default function ProjectCard(props) {
 
   return (
     <div key={index} className='border-zinc-700 border-2 hover:border-green-300 text-gray-500 hover:text-gray-400 transition-colors shadow-md rounded-md w-4/5 p-2 mb-4 lg:flex lg:flex-row-reverse lg:justify-end lg:items-center'>
-      <img  className='object-cover w-full lg:w-1/2 lg:object-contain rounded-t-md lg:rounded-none' src={require(`../assets/${image}`)} alt={`${name} cover`} />
+      <img  className='object-cover w-full lg:w-1/2 lg:object-contain rounded-t-md lg:rounded-none' src={`/src/assets/${image}`} alt={`${name} cover`} />
       <div className='lg:w-1/2 mt-2 lg:mt-0 lg:mr-2 lg:text-center lg:flex lg:h-full lg:flex-col lg:justify-around'>
         <h1 className='text-2xl font-medium text-gray-100'>{name}</h1>
         <p className='italic'>{description}</p>
