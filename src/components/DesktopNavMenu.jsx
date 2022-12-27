@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import MenuLinks from './MenuLinks';
 
-export default function DesktopNavMenu(props) {
+export default function DesktopNavMenu() {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
 
   const toggleMenu = () => {
-    setIsMenuHidden(isMenuHidden ? false : true);
+    setIsMenuHidden(!isMenuHidden);
   };
 
   return (
     <div className="hidden sm:block">
-      <MenuLinks toggleMenu={toggleMenu}/>
+      <MenuLinks toggleMenu={toggleMenu} />
     </div>
-  )
+  );
 }
