@@ -26,7 +26,7 @@ export default function ProjectCard({ project, index }) {
     <div key={index} className="card">
       <img
         className="object-cover w-full lg:w-1/2 lg:object-contain rounded-t-md lg:rounded-none"
-        src={`./src/assets/${image}`}
+        src={`/static/images/${image}`}
         alt={`${name} cover`}
       />
       <div className="card-info-container">
