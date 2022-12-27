@@ -18,9 +18,7 @@ export default function MenuLinks({ toggleMenu }) {
         toggleMenu();
       }}
     >
-      <li className="menu-link">
-        {link}
-      </li>
+      <li className="menu-link">{link}</li>
     </a>
   );
 
