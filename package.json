@@ -27,8 +27,8 @@
     "start": "vite --port 3000",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "lint": "eslint ./src/**/*",
-    "lint:fix": "eslint ./src/**/* --fix",
+    "lint": "eslint ./src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint ./src/**/*.{js,jsx,ts,tsx,json} --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
