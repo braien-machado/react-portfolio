@@ -1,0 +1,7 @@
+.links-container {
+  @apply flex flex-col w-full sm:flex-row items-center text-lg mt-4 sm:mt-0 gap-4 sm:gap-0;
+}
+
+.menu-link {
+  @apply w-fit text-center hover:text-green-300 hover:cursor-pointer text-white transition-colors;
+}
