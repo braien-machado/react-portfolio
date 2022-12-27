@@ -27,7 +27,8 @@
     "start": "vite --port 3000",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "lint": "eslint . --ext .ts, .tsx, .js, .jsx"
+    "lint": "eslint ./src/**/*",
+    "lint:fix": "eslint ./src/**/* --fix"
   },
   "eslintConfig": {
     "extends": [
