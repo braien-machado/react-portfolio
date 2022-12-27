@@ -6,11 +6,7 @@ import {
 } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { AiFillHtml5, AiOutlineGithub } from 'react-icons/ai';
-import {
-  DiCss3,
-  DiSass,
-  DiMongodb,
-} from 'react-icons/di';
+import { DiCss3, DiSass, DiMongodb } from 'react-icons/di';
 import {
   SiJest,
   SiRedux,

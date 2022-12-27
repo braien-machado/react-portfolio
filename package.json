@@ -28,7 +28,8 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint ./src/**/*",
-    "lint:fix": "eslint ./src/**/* --fix"
+    "lint:fix": "eslint ./src/**/* --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [

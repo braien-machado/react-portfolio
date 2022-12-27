@@ -6,20 +6,34 @@ export default function MobileNavMenu() {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
 
   const toggleMenu = () => {
-    setIsMenuHidden(isMenuHidden ? false : true);
+    setIsMenuHidden(!isMenuHidden);
   };
 
   return (
     <div className="sm:hidden h-7">
-      <nav className={`${isMenuHidden ? '-left-60' : 'left-0'} absolute top-0 w-60 bg-zinc-800 h-screen duration-300 z-10`}>
-        <MenuLinks toggleMenu={toggleMenu}/>
+      <nav
+        className={`${
+          isMenuHidden ? '-left-60' : 'left-0'
+        } absolute top-0 w-60 bg-zinc-800 h-screen duration-300 z-10`}
+      >
+        <MenuLinks toggleMenu={toggleMenu} />
       </nav>
-      { isMenuHidden ? null : (
-        <button className={`fixed cursor-default bg-black opacity-80 w-screen h-screen top-0 left-0`} onClick={toggleMenu}></button>
+      {!isMenuHidden && (
+        <button
+          type="button"
+          className="fixed cursor-default bg-black opacity-80 w-screen h-screen top-0 left-0"
+          onClick={toggleMenu}
+        >
+          Fechar
+        </button>
       )}
-      <button className='w-fit'>
-        <GiHamburgerMenu className='text-white hover:text-green-300 transition-colors' size={30} onClick={ toggleMenu }/>
+      <button type="button" className="w-fit">
+        <GiHamburgerMenu
+          className="text-white hover:text-green-300 transition-colors"
+          size={30}
+          onClick={toggleMenu}
+        />
       </button>
     </div>
-  )
+  );
 }
