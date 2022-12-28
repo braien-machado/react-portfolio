@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 
 import './Home.css';
