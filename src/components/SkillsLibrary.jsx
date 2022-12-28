@@ -1,5 +1,3 @@
-import React from 'react';
-
 const handleWords = (string) => {
   const arrayString = string.split('/');
   if (arrayString.length > 1) {

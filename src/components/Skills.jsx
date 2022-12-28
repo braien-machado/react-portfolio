@@ -1,4 +1,3 @@
-import React from 'react';
 import SkillsLibrary from './SkillsLibrary';
 import { softSkills, hardSkills } from '../skillsInfo';
 
