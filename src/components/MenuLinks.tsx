@@ -1,19 +1,27 @@
 import './MenuLinks.css';
 
-export default function MenuLinks({ toggleMenu }) {
-  const menuLinks = [
+interface menuLinkProps {
+  link: string;
+  id: string;
+}
+
+interface MenuLinksProps {
+  toggleMenu: () => void;
+}
+
+export default function MenuLinks({ toggleMenu }: MenuLinksProps) {
+  const menuLinks: menuLinkProps[] = [
     { link: 'Início', id: '#home' },
     { link: 'Habilidades', id: '#skills' },
     { link: 'Projetos', id: '#projects' },
     { link: 'Sobre mim', id: '#about' },
   ];
 
-  const generateMenuLink = ({ link, id }) => (
+  const generateMenuLink = ({ link, id }: menuLinkProps) => (
     <a
       className="sm:mx-4"
       href={id}
-      key={link}
-      to={id}
+      key={id}
       onClick={() => {
         toggleMenu();
       }}

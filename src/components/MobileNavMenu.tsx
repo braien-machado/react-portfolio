@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import MenuLinks from './MenuLinks';
 
@@ -27,11 +27,10 @@ export default function MobileNavMenu() {
           Fechar
         </button>
       )}
-      <button type="button" className="w-fit">
+      <button type="button" className="w-fit" onClick={toggleMenu}>
         <GiHamburgerMenu
           className="text-white hover:text-green-300 transition-colors"
           size={30}
-          onClick={toggleMenu}
         />
       </button>
     </div>

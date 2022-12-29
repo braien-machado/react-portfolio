@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -26,6 +26,7 @@ module.exports = {
       1,
       { extensions: ['.tsx', '.jsx', '.ts'] },
     ],
+    'object-curly-newline': 'off',
     'react/react-in-jsx-scope': 'off',
     'import/no-unresolved': 'off',
     'react/require-default-props': 'off',
