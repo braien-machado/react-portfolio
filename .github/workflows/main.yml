@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  Code-Style-Check:
+    runs-on: ubuntu-latest
+    name: Eslint-Check
+    steps:
+      - name: Fecth project repository
+        uses: actions/checkout@v2
+      
+      - name: ESLint run
+        run: |
+          npm i
+          npm run lint
