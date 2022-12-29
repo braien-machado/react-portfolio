@@ -1,29 +1,16 @@
+import { projectProps } from '../projectsInfo';
+
 import './ProjectCard.css';
 
-export default function ProjectCard({ project, index }) {
-  const {
-    name,
-    description,
-    image,
-    demo,
-    repository,
-    stacks = [],
-  } = project;
+interface ProjectCardProps {
+  project: projectProps;
+}
 
-  if (!name) {
-    return (
-      <div
-        key={index}
-        className="border-zinc-700 border-2 shadow-md duration-300 rounded-md w-4/5 p-2 mb-4"
-      >
-        <h1 className="text-2xl font-medium">Em breve</h1>
-        <p className="italic text-gray-500">Projeto em desenvolvimento...</p>
-      </div>
-    );
-  }
+export default function ProjectCard({ project }: ProjectCardProps) {
+  const { name, description, image, demo, repository, stacks = [] } = project;
 
   return (
-    <div key={index} className="card">
+    <div className="card">
       <img
         className="object-cover w-full lg:w-1/2 lg:object-contain rounded-t-md lg:rounded-none"
         src={`/static/images/${image}`}

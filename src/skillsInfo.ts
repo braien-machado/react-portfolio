@@ -1,3 +1,4 @@
+import { IconType } from 'react-icons';
 import {
   FaReact,
   FaDocker,
@@ -22,7 +23,9 @@ import { BiConversation } from 'react-icons/bi';
 import { RiTeamFill } from 'react-icons/ri';
 import { GiBrain } from 'react-icons/gi';
 
-const hardSkills = [
+export type SkillType = [IconType, string];
+
+const hardSkills: SkillType[] = [
   [IoLogoJavascript, 'Javascript'],
   [SiTypescript, 'Typescript'],
   [SiPython, 'Python'],
@@ -43,7 +46,7 @@ const hardSkills = [
   [AiOutlineGithub, 'GitHub'],
 ];
 
-const softSkills = [
+const softSkills: SkillType[] = [
   [BiConversation, 'Comunicação'],
   [RiTeamFill, 'Colaboração'],
   [FaHandHoldingHeart, 'Empatia'],

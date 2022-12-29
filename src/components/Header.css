@@ -1,0 +1,3 @@
+.main-header {
+  @apply flex justify-end p-2 fixed w-full bg-zinc-800 z-10 border-b-[1px] border-zinc-700;
+}
