@@ -1,14 +1,7 @@
+import getCurrentAge from '../utils/getCurrentAge';
+
 export default function About() {
-  function getAge() {
-    const today = new Date();
-    const birthDate = new Date(1997, 0, 22);
-
-    const age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    const d = today.getDate() < birthDate.getDate();
-
-    return m < 0 || (m === 0 && d) ? age - 1 : age;
-  }
+  const currentAge = getCurrentAge(new Date(1997, 1, 22));
 
   return (
     <section
@@ -22,7 +15,7 @@ export default function About() {
         <p>
           Brasileiro, natural de Nova Friburgo, cidade da região serrana do
           estado do Rio de Janeiro. Sou casado e tenho
-          <span>{` ${getAge()} anos.`}</span>
+          <span>{` ${currentAge} anos.`}</span>
         </p>
         <p>
           Cresci em contato com jogos eletrônicos e desde cedo tinha vontade de
