@@ -17,20 +17,22 @@ export default function Home() {
       />
       <div className="absolute bottom-7 flex w-32 justify-between">
         <a
-          className="hover:text-green-300 transition-colors"
+          className="hover:text-green-300 transition-colors flex flex-col items-center"
           href="https://github.com/braien-machado"
           target="_blank"
           rel="noreferrer"
         >
           <AiOutlineGithub size={50} />
+          Github
         </a>
         <a
-          className="hover:text-green-300 transition-colors"
+          className="hover:text-green-300 transition-colors flex flex-col items-center"
           href="https://linkedin.com/in/braien-machado"
           target="_blank"
           rel="noreferrer"
         >
           <AiFillLinkedin size={50} />
+          Linkedin
         </a>
       </div>
     </section>
