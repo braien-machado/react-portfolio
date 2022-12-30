@@ -17,22 +17,15 @@ export default function MenuLinks({ toggleMenu }: MenuLinksProps) {
     { link: 'Sobre mim', id: '#about' },
   ];
 
-  const generateMenuLink = ({ link, id }: menuLinkProps) => (
-    <a
-      className="sm:mx-4"
-      href={id}
-      key={id}
-      onClick={() => {
-        toggleMenu();
-      }}
-    >
-      <li className="menu-link">{link}</li>
-    </a>
-  );
-
   return (
     <ul className="links-container">
-      {menuLinks.map((link) => generateMenuLink(link))}
+      {menuLinks.map(({ link, id }) => (
+        <li className="sm:mx-4" key={id}>
+          <a href={id} onClick={() => toggleMenu()} className="menu-link">
+            {link}
+          </a>
+        </li>
+      ))}
     </ul>
   );
 }

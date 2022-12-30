@@ -5,9 +5,7 @@ import MenuLinks from './MenuLinks';
 export default function MobileNavMenu() {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
 
-  const toggleMenu = () => {
-    setIsMenuHidden(!isMenuHidden);
-  };
+  const toggleMenu = () => setIsMenuHidden(!isMenuHidden);
 
   return (
     <div className="sm:hidden h-7">

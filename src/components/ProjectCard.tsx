@@ -19,26 +19,27 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="card-info-container">
         <h1 className="text-2xl font-medium text-gray-100">{name}</h1>
         <p className="italic">{description}</p>
-        <ul className="list-inside list-square">
+        <div>
           <h2 className="text-md font-medium text-gray-100">Ferramentas</h2>
-          <div className="flex lg:justify-evenly flex-wrap">
+          <ul className="list-inside list-square flex lg:justify-evenly flex-wrap">
             {stacks.map((stack) => (
               <li key={stack} className="italic mx-2">
                 {stack}
               </li>
             ))}
-          </div>
-        </ul>
+          </ul>
+        </div>
         <div className="mt-2 flex justify-evenly flex-wrap">
-          <a href={demo} target="_blank" rel="noreferrer">
-            <button type="button" className="card-button">
-              Demonstração
-            </button>
+          <a href={demo} className="card-link" target="_blank" rel="noreferrer">
+            Demonstração
           </a>
-          <a href={repository} target="_blank" rel="noreferrer">
-            <button type="button" className="card-button">
-              Repositório
-            </button>
+          <a
+            href={repository}
+            className="card-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Repositório
           </a>
         </div>
       </div>

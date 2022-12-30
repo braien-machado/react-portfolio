@@ -33,7 +33,7 @@ const hardSkills: SkillType[] = [
   [DiCss3, 'CSS 3'],
   [DiSass, 'Sass'],
   [SiTailwindcss, 'Tailwindcss'],
-  [SiStyledcomponents, 'Styled/components'],
+  [SiStyledcomponents, 'Styled components'],
   [SiJest, 'Jest'],
   [FaReact, 'React'],
   [SiRedux, 'Redux'],
@@ -50,7 +50,7 @@ const softSkills: SkillType[] = [
   [BiConversation, 'Comunicação'],
   [RiTeamFill, 'Colaboração'],
   [FaHandHoldingHeart, 'Empatia'],
-  [GiBrain, 'Inteligência/Emocional'],
+  [GiBrain, 'Inteligência emocional'],
 ];
 
 export { hardSkills, softSkills };
