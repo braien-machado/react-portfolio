@@ -9,6 +9,8 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Home from './components/Home';
 
+ReactGA.initialize(import.meta.env.VITE_GOOGLE_ANALYTICS_ID);
+
 function App() {
   const location = useLocation();
   useEffect(() => {
